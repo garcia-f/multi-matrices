@@ -63,7 +63,15 @@ function multiplyMatrices() {
         result[i][j] = sum;
       }
     }
-    displayResult(result);
+      // Obtener una referencia al botón
+    const myButton = document.getElementById('myButton');
+
+    // Agregar un evento de clic al botón
+    myButton.addEventListener('click', function() {
+        // Mostrar un mensaje cuando se hace clic en el botón
+        
+        displayResult(result);
+    });
   }
 
 }
