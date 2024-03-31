@@ -98,7 +98,7 @@ function displayResult(result) {
   for (let i = 0; i < result.length; i++) {
     resultHTML += '<tr>';
     for (let j = 0; j < result[i].length; j++) {
-      resultHTML += `<td>${result[i][j]}</td>`;
+      resultHTML += `<td class = "matrix-input">${result[i][j]}</td>`;
     }
     resultHTML += '</tr>';
   }
