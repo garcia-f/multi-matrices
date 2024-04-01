@@ -1,18 +1,11 @@
 import express from 'express';
-import { fileURLToPath } from 'url';
-import { dirname, join } from 'path';
 
 const app = express();
 const PORT = 3000;
 
-// Body parser middleware
 app.use(express.json());
-app.use(express.urlencoded({ extended: true }));
+app.use( express.static('public') );
 
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = dirname(__filename);
-
-app.use(express.static(join(__dirname, 'public')));
 
 // Ruta para manejar la solicitud POST
 app.post('/multiplicar', (req, res) => {
